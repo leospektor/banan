@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Banan</title>
     <style>
         body {
             margin: 0;
@@ -15,6 +14,7 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            cursor: pointer;
         }
         img {
             max-width: 100%;
@@ -24,5 +24,17 @@
 </head>
 <body>
     <img src="banan.png" alt="Banan">
+    <audio id="music" src="Godlevel.mp3"></audio> <!-- Добавьте ваш трек -->
+
+    <script>
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('music');
+            if (audio.paused) {
+                audio.play(); // Запускает трек
+            } else {
+                audio.pause(); // Ставит трек на паузу
+            }
+        });
+    </script>
 </body>
 </html>
